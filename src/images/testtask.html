@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+</head>
+<body>
+        <input id='test2' type="text" list="cityName">
+        <div id="test" class =''>
+            <ul id = "insideList">                
+            </ul>
+        </div>
+    <style>
+    li{
+            list-style: none;
+            display: block;
+        }
+
+    li:hover{
+        background-color: blue;
+    }    
+    div {
+        display: none;
+        /*background: silver;*/
+        /*height: 200px;*/
+        width: 200px;
+    }
+    input{
+        width: 200px;
+    }
+    .focused{
+        display: block;
+    }
+
+    .delete{
+        display:none;
+    }
+    </style>
+    <script>
+    const div = document.getElementById('test');
+    const input = document.getElementById('test2');
+
+    let cityName = ['Moscow', 'Paris', 'London', 'Madrid', 'Rome'];
+    const ul = document.getElementById('insideList')
+
+    for(i = 0; i < cityName.length; i++){
+        let li = document.createElement('li');
+        li.innerHTML = cityName[i];
+        insideList.appendChild(li);
+    }
+    const li = document.getElementsByTagName('li');
+    input.addEventListener('input', function() {for(i = 0; i < li.length; i++){
+        let a = li[i];
+        let b = a.innerHTML.toLowerCase(); 
+    if(!b.includes(input.value.toLowerCase())){
+        li[i].classList.add('delete');
+    } else{
+        li[i].classList.remove('delete');
+    }
+    }});
+    
+    input.addEventListener('focus', function() {
+	        div.classList.add('focused');
+            });
+    input.addEventListener('blur', function() {
+	        div.classList.remove('focused');
+            });
+    </script>
+</body>
+</html>

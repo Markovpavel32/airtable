@@ -1,0 +1,30 @@
+body{
+  background-color: grey;
+}
+tr{
+  border-bottom: 3px solid white;
+}
+.cell{
+  color: white;
+  padding: 30px;
+  font-size: 20px;
+}
+
+table { 
+  border-collapse: collapse; 
+}
+
+.container{
+  margin-top: 60px;
+  display: inline-block;
+  font-size: 30px;
+  margin-right: 20px;
+  cursor: default;
+}
+input.container{
+  cursor: text;
+}
+
+.logo{
+  position: absolute;
+}

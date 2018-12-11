@@ -1,0 +1,8 @@
+/dist
+/node_modules
+createData.test.js
+/lib
+.babelrc
+babl.config.js
+/__tests__
+.eslintr.js
